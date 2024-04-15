@@ -1,0 +1,32 @@
+This code was done using Gitpod online, the reason being is that am struggle to enable the 
+linux development environment my chromebook is not compatabile. 
+and this restricts me from installing IDE like code::blocks and for me to execute this task
+I had to do it online on Gitpod.
+
+And I had to clone the Recruitment file here on Gitpod not on my PC and that is why i did this code file = fopen("VehiclePositions.dat", "rb");
+  when i was openning the file.
+
+
+
+                                         Notes
+
+This code defines a function nearest Neighbor Search that performs a nearest neighbor search in a kd-tree.
+Here is an explanation of how it works.
+
+#Function Signature: The function takes four arguments:
+root: A pointer to the root node of the kd-tree.
+target: The target coordinate for which the nearest neighbor is being searched.
+closest_id: A pointer to an integer that will store the ID of the closest position found so far.
+closest_dist: A pointer to a float that will store the distance to the closest position found so far.
+
+#Base Case: If the root node is NULL, indicating an empty subtree, the function returns immediately.
+
+#Calculating Distance: The function calculates the distance (dist) between the coordinates of the current node (root->data.latitude and root->data.longitude) and the target coordinate (target.latitude and target.longitude) using the distance function previously defined.
+
+#Updating Closest Position: If the calculated distance is less than the closest_dist value (initially set to INFINITY), the function updates closest_dist to the new distance and closest_id to the ID of the current node.
+
+#Deciding which Subtree to Explore: The function then decides which subtree to explore based on the current node's splitting axis. In this implementation, the splitting axis alternates between latitude and longitude at each level of the tree.
+
+#Recursion: The function recursively calls itself on the chosen subtree (root->left or root->right) if the distance between the target coordinate and the splitting axis of the current node is less than closest_dist. This is an optimization to avoid exploring subtrees that cannot contain a closer neighbor.
+
+#Overall: The function recursively searches the kd-tree, updating closest_id and closest_dist as it finds closer positions. It efficiently prunes subtrees that cannot contain a closer neighbor based on the current best distance (closest_dist).
