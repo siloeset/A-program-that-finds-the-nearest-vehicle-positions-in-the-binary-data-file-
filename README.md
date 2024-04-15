@@ -1,0 +1,2 @@
+# Esethusilo A-program-that-finds-the-nearest-vehicle-positions-in-the-binary-data-file-
+a program that efficiently finds the position IDs of the 10 closest positions in the "VehiclePositions.dat" file to each of the 10 coordinates provided, outperforming a simple benchmark approach that loops through all 2 million positions. The challenge is to optimize the program for speed and improve upon the benchmark method.
